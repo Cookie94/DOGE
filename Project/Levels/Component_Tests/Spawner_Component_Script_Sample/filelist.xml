@@ -1,6 +1,0 @@
-<download name="SpawnerComponentScriptSample" type="Map">
- <index src="filelist.xml" dest="filelist.xml"/>
- <files>
-  <file src="level.pak" dest="level.pak" size="40659" md5="e01cdae8839994101a09914671da251e"/>
- </files>
-</download>

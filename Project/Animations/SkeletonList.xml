@@ -1,6 +1,0 @@
-<SkeletonList>
- <Skeleton name="chicken_skel" file="Objects/CharacterModels/Chicken/chicken_skeleton.chr"/>
- <Skeleton name="biped_skeleton" file="Objects/Tutorials/Biped/biped_skeleton.chr"/>
- <Skeleton name="striker_skel" file="objects/characters/striker/striker_skel.chr"/>
-</SkeletonList>
-

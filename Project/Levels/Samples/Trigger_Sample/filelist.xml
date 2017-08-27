@@ -1,6 +1,0 @@
-<download name="trigger_sample" type="Map">
- <index src="filelist.xml" dest="filelist.xml"/>
- <files>
-  <file src="level.pak" dest="level.pak" size="304508" md5="12f00f3a87de794043c0b006c82bf8da"/>
- </files>
-</download>

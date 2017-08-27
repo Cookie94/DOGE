@@ -1,9 +1,0 @@
-<ObjectLayer>
- <Layer Name="Target_Attraction" GUID="{e69bfbdf-59f1-42b9-aaf8-99358b53e906}" Exportable="1" ExportLayerPak="1" DefaultLoaded="1" HavePhysics="1" IsDefaultColor="1">
-  <LayerObjects>
-   <Object Type="AreaBox" Layer="Target_Attraction" LayerGUID="{e69bfbdf-59f1-42b9-aaf8-99358b53e906}" Id="{9ccf6a02-32ce-4964-ba44-937f04938d78}" Name="target_attractor_001" HideOrder="0" Pos="1017.5185,1014.71,32.529926" FloorNumber="-1" Rotate="1,0,0,0" AreaId="-1" FadeInZone="0" Width="0.1" Length="0.1" Height="0.1" GroupId="0" Priority="0" DisplayFilled="0" DisplaySoundInfo="0" EntityClass="AreaBox" BoxMin="-0.050000001,-0.050000001,0" BoxMax="0.050000001,0.050000001,0.1">
-    <SoundData Side1="0" Side2="0" Side3="0" Side4="0" Side5="0" Side6="0"/>
-   </Object>
-  </LayerObjects>
- </Layer>
-</ObjectLayer>

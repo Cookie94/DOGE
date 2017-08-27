@@ -1,6 +1,0 @@
-<download name="gems_snow_sample" type="Map">
- <index src="filelist.xml" dest="filelist.xml"/>
- <files>
-  <file src="level.pak" dest="level.pak" size="362827" md5="ebd23d4d922b4ec6bd073b7973df515c"/>
- </files>
-</download>

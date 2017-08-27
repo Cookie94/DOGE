@@ -1,6 +1,0 @@
-<download name="gems_lightning_arc_sample" type="Map">
- <index src="filelist.xml" dest="filelist.xml"/>
- <files>
-  <file src="level.pak" dest="level.pak" size="260260" md5="8114424db86c35fe4596ceecde5d422c"/>
- </files>
-</download>

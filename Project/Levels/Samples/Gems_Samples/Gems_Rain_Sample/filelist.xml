@@ -1,6 +1,0 @@
-<download name="Gems_Rain_Clouds" type="Map">
- <index src="filelist.xml" dest="filelist.xml"/>
- <files>
-  <file src="level.pak" dest="level.pak" size="17715" md5="b76b9afd7101eb879837ce2ff0d3e6f0"/>
- </files>
-</download>

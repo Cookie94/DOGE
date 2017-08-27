@@ -1,8 +1,0 @@
-<TagDefinition version="2">
- <Tags>
-  <Tag name="Idle"/>
-  <Tag name="Nav"/>
-  <Tag name="Jump"/>
-  <Tag name="Fidget"/>
- </Tags>
-</TagDefinition>

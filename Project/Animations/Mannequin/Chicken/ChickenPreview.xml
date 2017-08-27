@@ -1,7 +1,0 @@
-<MannequinPreview>
- <controllerDef filename="animations/mannequin/chicken/chickencontrollerdefs.xml"/>
- <contexts>
-  <contextData name="Char3P" enabled="1" database="animations/mannequin/adb/chickenanims.adb" context="Char3P" model="objects/charactermodels/chicken/chicken_cdf.cdf"/>
- </contexts>
- <History StartTime="0" EndTime="0"/>
-</MannequinPreview>

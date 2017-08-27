@@ -1,6 +1,0 @@
-<download name="LyShineFeatures" type="Map">
- <index src="filelist.xml" dest="filelist.xml"/>
- <files>
-  <file src="level.pak" dest="level.pak" size="10089" md5="fed57ed8d47a405405c2f013278a387e"/>
- </files>
-</download>

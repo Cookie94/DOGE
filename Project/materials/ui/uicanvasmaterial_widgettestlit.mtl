@@ -1,6 +1,0 @@
-<Material MtlFlags="524288" Shader="Illum" GenMask="80000001" StringGenMask="%ALLOW_SILHOUETTE_POM%SUBSURFACE_SCATTERING" SurfaceType="mat_invulnerable" Diffuse="1,1,1" Specular="0,0,0" Emittance="0,0,0,0" Opacity="1" AlphaTest="0.02" CloakAmount="0" vertModifType="0" LayerAct="1">
- <Textures>
-  <Texture Map="Diffuse" File="$UiWidgetTestLit" IsTileU="0" IsTileV="0"/>
- </Textures>
- <PublicParams EmittanceMapGamma="1" SSSIndex="0" IndirectColor="0.21223076,0.21223076,0.21223076"/>
-</Material>
