@@ -1,0 +1,9 @@
+<Material MtlFlags="526336" Shader="Particles" GenMask="404" StringGenMask="" SurfaceType="" Diffuse="1,1,1" Specular="0,0,0" Opacity="1" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/vfx/glow/glow_b.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" RotateW="90"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="textures/vfx/refraction/refraction_a_ddn.dds"/>
+ </Textures>
+ <PublicParams GlobalIlluminationAmount="1" RefrBumpScale="0.050000001"/>
+</Material>

@@ -1,0 +1,5 @@
+<Material MtlFlags="524320" Shader="Referenceimage" GenMask="0" StringGenMask="" SurfaceType="mat_invulnerable" Diffuse="1,1,1" Specular="0,0,0" Emittance="0,0,0,20" Opacity="1" AlphaTest="0.23999999" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="$UiOn3dShapes" IsTileU="0" IsTileV="0"/>
+ </Textures>
+</Material>
