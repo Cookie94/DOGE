@@ -1,0 +1,23 @@
+<ObjectLayer>
+ <Layer Name="Collision" GUID="{643a0ef6-c037-46f6-8e14-ad2136ee7c2c}" Exportable="1" ExportLayerPak="1" DefaultLoaded="1" HavePhysics="1" IsDefaultColor="1">
+  <LayerObjects>
+   <Object Type="Brush" Layer="Collision" LayerGUID="{643a0ef6-c037-46f6-8e14-ad2136ee7c2c}" Id="{b25f0b1c-df9c-4126-8951-cbba0576e4bc}" Name="ParticleEffect_Collision_002" HideOrder="0" Pos="1022.5004,1035.885,34.759178" FloorNumber="-1" Rotate="0.70710677,0,0,0.70710677" Material="objects/particleassets/showroom/particle_showroom_001_mg" Prefab="Objects/particleassets/showroom/particle_geo_emitter_002.cgf" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" DynamicDistanceShadows="0" Hideable="0" LodRatio="100" ViewDistanceMultiplier="1" NotTriangulate="0" NoDynamicWater="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" Occluder="0" DrawLast="0" ShadowLodBias="0" RndFlags="1610612744">
+    <CollisionFiltering>
+     <Type Ship="0" Shield="0" Asteroid="0"/>
+     <Ignore Ship="0" Shield="0" Asteroid="0"/>
+    </CollisionFiltering>
+   </Object>
+   <Object Type="ParticleEntity" Layer="Collision" LayerGUID="{643a0ef6-c037-46f6-8e14-ad2136ee7c2c}" Id="{a75e3c93-7c41-4dd2-8c23-92722824fc7a}" Name="ParticleEffect_Collision_001" HideOrder="0" Pos="1022.3505,1035.859,34.72237" FloorNumber="-1" Rotate="0.6946584,0,0,-0.71933979" Material="objects/particleassets/showroom/technical_particle_showroom_001_mg" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="ParticleEffect">
+    <Properties Comment="" bActive="1" esAttachForm="" esAttachType="" bCountPerUnit="0" CountScale="1" NetworkSync="0" ParticleEffect="particles_collision.collision_001" bPrime="1" PulsePeriod="0" bRegisterByBBox="0" Scale="1" soclasses_SmartObjectClass="" SpeedScale="1" Strength="-1" TimeScale="1">
+     <Audio bEnableAudio="0" audioRTPCRtpc="particlefx"/>
+    </Properties>
+   </Object>
+   <Object Type="Brush" Layer="Collision" LayerGUID="{643a0ef6-c037-46f6-8e14-ad2136ee7c2c}" Id="{73f8bab6-3ed7-4821-b7ff-2e2afab102c3}" Name="showroom_collision_platform_2" HideOrder="0" Pos="1018.6751,1035.8813,32.284218" FloorNumber="-1" Rotate="1,0,0,0" Prefab="Objects/particleassets/showroom/showroom_collision_platform_001.cgf" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" DynamicDistanceShadows="0" Hideable="0" LodRatio="100" ViewDistanceMultiplier="1" NotTriangulate="0" NoDynamicWater="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" Occluder="0" DrawLast="0" ShadowLodBias="0" RndFlags="1610612744">
+    <CollisionFiltering>
+     <Type Ship="0" Shield="0" Asteroid="0"/>
+     <Ignore Ship="0" Shield="0" Asteroid="0"/>
+    </CollisionFiltering>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

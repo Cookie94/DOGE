@@ -1,0 +1,40 @@
+<Material MtlFlags="524544" >
+   <SubMaterials>
+      <Material Name="proxy_phys_head" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="1.000000,0.513000,0.000000" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+      <Material Name="proxy_phys_l_arm" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="0.000000,1.000000,1.000000" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+      <Material Name="proxy_phys_r_arm" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="1.000000,0.250000,0.440650" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+      <Material Name="proxy_phys_spine" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="1.000000,1.000000,0.000000" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+      <Material Name="proxy_phys_l_foot" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="0.315100,0.000000,1.000000" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+      <Material Name="proxy_phys_l_leg" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="0.000000,0.000000,1.000000" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+      <Material Name="proxy_phys_r_foot" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="1.000000,0.000000,1.000000" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+      <Material Name="proxy_phys_r_leg" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="1.000000,0.000000,0.000000" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+      <Material Name="proxy_phys_hips" MtlFlags="1152" Shader="Nodraw" GenMask="0" SurfaceType="" MatTemplate="" Diffuse="0.000000,1.000000,0.000000" Specular="0.500000,0.500000,0.500000" Emissive="0.000000,0.000000,0.000000" Shininess="10" Opacity="1" >
+         <Textures>
+         </Textures>
+      </Material>
+   </SubMaterials>
+</Material>

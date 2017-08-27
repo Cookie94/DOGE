@@ -1,0 +1,6 @@
+<download name="UiIn3DWorld" type="Map">
+ <index src="filelist.xml" dest="filelist.xml"/>
+ <files>
+  <file src="level.pak" dest="level.pak" size="99229" md5="bb3625583ee386507f905fb056fdbdbb"/>
+ </files>
+</download>

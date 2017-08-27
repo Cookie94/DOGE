@@ -1,0 +1,71 @@
+<ObjectLayer>
+ <Layer Name="Low_Clouds" GUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1">
+  <LayerObjects>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{6ABA3601-D312-4FF9-9356-21C6B880AF36}" Name="VolumeObject1" HideOrder="0" Pos="71.000023,295.31702,166.6358" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_ultra_dense_100_100_40_alt1.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{7A024A2B-DE21-4209-9691-7DE6A16D2889}" Name="VolumeObject13" HideOrder="0" Pos="764.99988,179,179.44867" FloorNumber="-1" Rotate="1,0,0,0" Scale="1.5699999,1.5699999,1.5699999" ColorRGB="16776960" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster3.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{D9C4973C-2247-4CD6-8218-E8A57A8D5692}" Name="VolumeObject12" HideOrder="0" Pos="417.99997,540,127.54729" FloorNumber="-1" Rotate="0.70710677,0,0,-0.70710677" ColorRGB="65535" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster3.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{A1515961-973C-4B88-BBEF-F39A3B266619}" Name="VolumeObject6" HideOrder="0" Pos="504.99994,-21.999969,181.06686" FloorNumber="-1" Rotate="1,0,0,0" Scale="1.8299999,1.8299999,1.8299999" ColorRGB="16776960" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster4.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{4699FC61-3092-4117-B218-D598FC86F955}" Name="VolumeObject10" HideOrder="0" Pos="207.99997,451,166.6358" FloorNumber="-1" Rotate="0.70710677,0,0,0.70710677" Scale="1.3899999,1.3899999,1.39" ColorRGB="16776960" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_ultra_dense_100_100_40_alt1.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{0783A682-1FD4-4F35-A62C-08DF64A5F8A2}" Name="VolumeObject4" HideOrder="0" Pos="240.99997,249,142.91415" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_dense_100_100_50_var2.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{39FAC891-BA23-4DC5-BA6F-B5B72DB6E188}" Name="VolumeObject9" HideOrder="0" Pos="509.99988,388,166.6358" FloorNumber="-1" Rotate="1,0,0,0" Scale="1.79,1.79,1.79" ColorRGB="65535" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster6.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{ABDDFA95-383C-4E3C-99A4-9E90B3668DC2}" Name="VolumeObject7" HideOrder="0" Pos="149,-4.0000114,208.06688" FloorNumber="-1" Rotate="1,0,0,0" Scale="1.4,1.4,1.4" ColorRGB="16776960" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster3.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{3F0A3CA9-8ABB-4F43-A44D-5F744B07E977}" Name="VolumeObject14" HideOrder="0" Pos="1029.6343,-480.91498,270.7598" FloorNumber="-1" Rotate="1,0,0,0" Scale="3.3122997,3.3122997,3.3122997" ColorRGB="65535" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster4.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{706EAEAB-DE5B-458D-8DB5-E10EF08420B6}" Name="VolumeObject11" HideOrder="0" Pos="-180.99992,464,172.06686" FloorNumber="-1" Rotate="1,0,0,0" Scale="1.551,1.551,1.551" ColorRGB="65535" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster3.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{23AC1FB8-40C0-435E-A8CF-D6E7413EE9FB}" Name="VolumeObject15" HideOrder="0" Pos="36.709122,-137.38501,208.69894" FloorNumber="-1" Rotate="1,0,0,0" Scale="1.551,1.551,1.551" ColorRGB="16776960" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster3.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{136250EE-4F1E-4C57-B24D-72B48297C82C}" Name="VolumeObject5" HideOrder="0" Pos="414.99994,247,142.91415" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16776960" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster6.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+   <Object Type="Entity" Layer="Low_Clouds" LayerGUID="{BAB2E561-B69D-4648-88A3-A0AF59473BB0}" Id="{3D11CBF8-0CBC-423C-9639-A21E16C56BEC}" Name="VolumeObject8" HideOrder="0" Pos="-103.13177,34.000015,197.43735" FloorNumber="-1" Rotate="1,0,0,0" Scale="1.8499999,1.8499999,1.8499999" ColorRGB="16776960" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="VolumeObject">
+    <Properties file_VolumeObjectFile="Libs/Clouds/cumulus_cluster2.xml">
+     <Movement bAutoMove="0" fFadeDistance="0" vector_SpaceLoopBox="2000,2000,2000" vector_Speed="0,0,0"/>
+    </Properties>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

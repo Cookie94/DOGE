@@ -1,0 +1,9 @@
+<ObjectLayer>
+ <Layer Name="Rain" GUID="{23E9D338-E913-4250-8E6D-09021AC54F91}" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1">
+  <LayerObjects>
+   <Object Type="Entity" Layer="Rain" LayerGUID="{23E9D338-E913-4250-8E6D-09021AC54F91}" Id="{1732FC21-8CE3-4FDF-B129-198645433A90}" Name="Rain1" HideOrder="0" Pos="259.99997,291.375,32.999996" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="16776960" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" LodRatio="100" ViewDistanceMultiplier="1" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" CreatedThroughPool="0" ObstructionMultiplier="1" EntityClass="Rain">
+    <Properties fAmount="3" fDiffuseDarkening="1" bDisableOcclusion="0" bEnabled="1" bIgnoreVisareas="0" fPuddlesAmount="0" fPuddlesMaskAmount="0" fPuddlesRippleAmount="2" fRadius="1000" fRainDropsAmount="0" fRainDropsLighting="1" fRainDropsSpeed="1" fSplashesAmount="1.5"/>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

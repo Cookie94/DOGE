@@ -1,0 +1,6 @@
+<download name="Decal_Sample" type="Map">
+ <index src="filelist.xml" dest="filelist.xml"/>
+ <files>
+  <file src="level.pak" dest="level.pak" size="646215" md5="35113b1d63db2b4098c67ed8c070a8b3"/>
+ </files>
+</download>

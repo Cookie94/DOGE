@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{265A7FD5-2A06-4BF7-B9FD-F999F51ED8B7}" SchemaVersion="72">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{265A7FD5-2A06-4BF7-B9FD-F999F51ED8B7}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="SamplesProject" ID="{256B03C3-4989-45AA-A1D9-22112DB28ED7}" ShortID="346529634">
+					<ChildrenList>
+						<StateGroup Name="GameState" ID="{AEA86274-7DB6-466C-8F60-1910FC2041AB}">
+							<ChildrenList>
+								<State Name="None" ID="{B97D1D92-6CC6-4D7B-A2E7-265DED0A8C98}"/>
+								<State Name="Freeroam" ID="{AF5CFFAA-B6B5-4E75-955C-3313311FF415}"/>
+								<State Name="CannonShoot" ID="{88FEB19C-974E-47C4-BA48-091160A1BC00}"/>
+							</ChildrenList>
+						</StateGroup>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

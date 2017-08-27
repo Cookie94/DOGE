@@ -1,0 +1,12 @@
+<ObjectLayer>
+ <Layer Name="Camera" GUID="{b316946d-7fdf-4bce-a001-aa8e02a173f9}" Exportable="1" ExportLayerPak="1" DefaultLoaded="1" HavePhysics="1" IsDefaultColor="1">
+  <LayerObjects>
+   <Object Type="Brush" Layer="Camera" LayerGUID="{b316946d-7fdf-4bce-a001-aa8e02a173f9}" Id="{e33ba2bf-80c4-4694-adc0-36ba09cd3fb9}" Name="showroom_skybox_001" HideOrder="0" Pos="1033.4999,1024,29.68066" FloorNumber="-1" Rotate="1,0,0,0" Scale="10,10,10" Prefab="Objects/particleassets/showroom/showroom_skybox_001.cgf" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" DynamicDistanceShadows="0" Hideable="0" LodRatio="100" ViewDistanceMultiplier="1" NotTriangulate="0" NoDynamicWater="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" Occluder="0" DrawLast="0" ShadowLodBias="0" RndFlags="1610612744">
+    <CollisionFiltering>
+     <Type Ship="0" Shield="0" Asteroid="0"/>
+     <Ignore Ship="0" Shield="0" Asteroid="0"/>
+    </CollisionFiltering>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

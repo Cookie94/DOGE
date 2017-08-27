@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1389455E-E9E8-4FC4-8BDD-74454AE69B6C}" SchemaVersion="72">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{1389455E-E9E8-4FC4-8BDD-74454AE69B6C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Soundcaster Session 1" ID="{D03D3020-15FD-42EA-8D35-B14F1159E50B}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="RobotMovement" ID="{E25DEA42-7003-4526-B317-C426054E993E}" WorkUnitID="{CAA24337-37BE-4A35-8B00-0860CE2183C2}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="CannonChargeUp" ID="{04295D00-B848-4BC2-A854-5902644FE33D}" WorkUnitID="{CAA24337-37BE-4A35-8B00-0860CE2183C2}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="AmbienceExtSuburbs5pm" ID="{6525FB88-C7E8-440B-A78A-3E902AF834E9}" WorkUnitID="{CAA24337-37BE-4A35-8B00-0860CE2183C2}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RobotHeadMove" ID="{82EEAFCE-21A9-4208-9A23-98C4D87A61B9}" WorkUnitID="{CAA24337-37BE-4A35-8B00-0860CE2183C2}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="CannonShot" ID="{3D1E7205-895E-4EFE-B573-8751D2F013EB}" WorkUnitID="{CAA24337-37BE-4A35-8B00-0860CE2183C2}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RobotJumpLand" ID="{569FCE79-FFB0-44C3-A776-5781B9A2CB4C}" WorkUnitID="{CAA24337-37BE-4A35-8B00-0860CE2183C2}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="CanonballWallImpact" ID="{C9C122E0-A50D-4EFF-A8B6-CA51132095A2}" WorkUnitID="{CAA24337-37BE-4A35-8B00-0860CE2183C2}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BoxImpact" ID="{E0C452AC-966F-43DA-9F30-6B00CB17E6E0}" WorkUnitID="{CAA24337-37BE-4A35-8B00-0860CE2183C2}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="RobotVelocity" ID="{9F0F07DD-938A-428E-843D-8B4BABDB87AE}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="CannonChargeUpLevel" ID="{8CE65AD9-551A-496C-8467-006D3C4C7F2A}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

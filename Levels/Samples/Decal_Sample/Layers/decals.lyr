@@ -1,0 +1,7 @@
+<ObjectLayer>
+ <Layer Name="Decals" GUID="{203C14A3-A8C1-4694-8D5A-3E211EFE3646}" Exportable="1" ExportLayerPak="1" DefaultLoaded="1" HavePhysics="1" IsDefaultColor="1">
+  <LayerObjects>
+   <Object Type="Prefab" Layer="Decals" LayerGUID="{203C14A3-A8C1-4694-8D5A-3E211EFE3646}" Id="{12BAA19D-D763-4BEC-BFBF-EE67C25EEFBF}" Name="Sphere_Controller1" HideOrder="0" Pos="1113.4954,1063.9633,50.999996" FloorNumber="-1" Rotate="-0.0087265298,0,0,0.99996191" ColorRGB="16768000" PrefabGUID="{93573FEF-0FD4-4F6C-8D2C-E862C4A09762}" PrefabName="Character_Controllers.Sphere_Controller"/>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

@@ -1,0 +1,6 @@
+<download name="door" type="Map">
+ <index src="filelist.xml" dest="filelist.xml"/>
+ <files>
+  <file src="level.pak" dest="level.pak" size="40777" md5="5d75a012debee334300b8a16689b2b1f"/>
+ </files>
+</download>

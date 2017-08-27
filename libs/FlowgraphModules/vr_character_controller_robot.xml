@@ -1,0 +1,1000 @@
+<Graph isModule="1" moduleName="VR_Character_Controller_Robot" Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+ <ModuleInputsOutputs>
+  <Port Name="Sphere" Type="1" Input="1"/>
+  <Port Name="Ref_Move" Type="1" Input="1"/>
+  <Port Name="Camera" Type="1" Input="1"/>
+  <Port Name="Ref_Camera_Yaw" Type="1" Input="1"/>
+  <Port Name="Camera_Fulcrum" Type="1" Input="1"/>
+  <Port Name="HMD_Fulcrum" Type="1" Input="1"/>
+  <Port Name="Head_Tilt_Parent" Type="1" Input="1"/>
+  <Port Name="Robot_Body" Type="1" Input="1"/>
+ </ModuleInputsOutputs>
+ <Nodes>
+  <Node Id="1" Class="Module:Start_VR_Character_Controller_Robot" pos="1260,-220,0" flags="0"/>
+  <Node Id="2" Class="Module:End_VR_Character_Controller_Robot" pos="1260,-300,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="202" Class="Math:Mul" pos="10315,55,0" flags="0">
+   <Inputs A="0" B="0.01"/>
+  </Node>
+  <Node Id="214" Class="Entity:EntityPos" pos="11575,35,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="215" Class="Vec3:ToVec3" pos="11385,65,0" flags="0">
+   <Inputs x="0" y="0" z="0"/>
+  </Node>
+  <Node Id="217" Class="Math:Mul" pos="10495,55,0" flags="0">
+   <Inputs A="0" B="-10"/>
+  </Node>
+  <Node Id="220" Class="Math:Calculate" pos="10665,55,0" flags="0">
+   <Inputs Operation="0" A="0" B="0"/>
+  </Node>
+  <Node Id="221" Class="Interpolate:SmoothFloat" pos="10935,55,0" flags="0">
+   <Inputs InitialValue="0" TargetValue="0" Time="0.1"/>
+  </Node>
+  <Node Id="904" Class="Physics:ActionImpulse" pos="6145,2095,0" flags="0">
+   <Inputs Impulse="100,0,0" AngularImpulse="0,0,0" Point="0,0,0" PartIndex="0" CoordSystem="1"/>
+  </Node>
+  <Node Id="906" Class="Vec3:ScaleVec3" pos="5685,2165,0" flags="0">
+   <Inputs vector="0,0,0" scale="-7"/>
+  </Node>
+  <Node Id="923" Class="Vec3:FromVec3" pos="5295,2165,0" flags="0">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="924" Class="Vec3:ToVec3" pos="5505,2165,0" flags="0">
+   <Inputs x="0" y="0" z="0"/>
+  </Node>
+  <Node Id="988" Class="Entity:GetPos" pos="9775,2165,0" flags="0">
+   <Inputs CoordSys="1"/>
+  </Node>
+  <Node Id="991" Class="Physics:ActionImpulse" pos="7105,-505,0" flags="0">
+   <Inputs Impulse="100,0,0" AngularImpulse="0,0,0" Point="0,0,0" PartIndex="0" CoordSystem="1"/>
+  </Node>
+  <Node Id="992" Class="Vec3:AddVec3" pos="10235,2185,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,1.1"/>
+  </Node>
+  <Node Id="998" Class="Entity:GetPos" pos="5075,2925,0" flags="0">
+   <Inputs CoordSys="1"/>
+  </Node>
+  <Node Id="1028" Class="Entity:EntityPos" pos="10865,2195,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="1055" Class="Vec3:NormalizeVec3" pos="9925,45,0" flags="0">
+   <Inputs vector="0,0,0"/>
+  </Node>
+  <Node Id="1076" Class="Input:ActionHandler" pos="4815,-405,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="xi_movey"/>
+  </Node>
+  <Node Id="1077" Class="Math:Mul" pos="6205,-415,0" flags="0">
+   <Inputs A="0" B="60"/>
+  </Node>
+  <Node Id="1078" Class="Vec3:ScaleVec3" pos="6835,-455,0" flags="0">
+   <Inputs vector="0,0,0" scale="160"/>
+  </Node>
+  <Node Id="1080" Class="Math:Abs" pos="5245,-495,0" flags="0">
+   <Inputs A="0"/>
+  </Node>
+  <Node Id="1083" Class="Math:Less" pos="5415,-495,0" flags="0">
+   <Inputs A="0.01" B="0"/>
+  </Node>
+  <Node Id="1084" Class="Camera:View" pos="3365,-625,0" flags="0">
+   <Inputs Enable="0" Disable="0" FOV="60" Blend="0" BlendFOVSpeed="5" BlendFOVOffset="0" BlendPosSpeed="5" BlendPosOffset="0,0,0" BlendRotSpeed="10" BlendRotOffset="0,0,0"/>
+  </Node>
+  <Node Id="1086" Class="Time:Time" pos="4565,2995,0" flags="0">
+   <Inputs paused="0"/>
+  </Node>
+  <Node Id="1087" Class="Physics:Dynamics" pos="4965,2145,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="1088" Class="Mission:GameTokenSet" pos="2400,-510,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Sphere" TokenValue=""/>
+  </Node>
+  <Node Id="1089" Class="Mission:GameToken" pos="4575,2145,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Sphere" CompareValue=""/>
+  </Node>
+  <Node Id="1092" Class="Mission:GameTokenSet" pos="2400,-640,0" flags="0">
+   <Inputs gametoken_Token="On_Start" TokenValue=""/>
+  </Node>
+  <Node Id="1093" Class="Mission:GameToken" pos="4445,-405,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1100" Class="Math:Abs" pos="5725,175,0" flags="0">
+   <Inputs A="0"/>
+  </Node>
+  <Node Id="1101" Class="Math:Less" pos="5895,175,0" flags="0">
+   <Inputs A="0.07" B="0"/>
+  </Node>
+  <Node Id="1327" Class="VR:RecenterPose" pos="8605,465,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="1331" Class="Logic:Any" pos="8425,465,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="1332" Class="Debug:InputKey" pos="8135,555,0" flags="0">
+   <Inputs Key="6" NonDevMode="0" KeyboardOnly="0"/>
+  </Node>
+  <Node Id="1340" Class="Mission:GameToken" pos="8115,445,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1350" Class="Mission:GameToken" pos="10755,2105,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Ref_Move" CompareValue=""/>
+  </Node>
+  <Node Id="1376" Class="Time:Time" pos="9455,2255,0" flags="0">
+   <Inputs paused="0"/>
+  </Node>
+  <Node Id="1382" Class="Mission:GameTokenSet" pos="10235,2295,0" flags="0">
+   <Inputs gametoken_Token="Pos_Sphere_World" TokenValue=""/>
+  </Node>
+  <Node Id="1384" Class="Mission:GameTokenSet" pos="2400,-370,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Ref_Move" TokenValue=""/>
+  </Node>
+  <Node Id="1385" Class="Mission:GameToken" pos="9325,2145,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Sphere" CompareValue=""/>
+  </Node>
+  <Node Id="1386" Name="Set move reference position to be the same as the physics sphere X,Y,Z" Class="_blackbox" pos="9280,2060,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="988" Node1="992" Node2="1028" Node3="1350" Node4="1376" Node5="1382" Node6="1385"/>
+  </Node>
+  <Node Id="1388" Name="Re-center HMD rotation" Class="_blackbox" pos="8070,400,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1327" Node1="1331" Node2="1332" Node3="1340"/>
+  </Node>
+  <Node Id="1392" Class="Mission:GameTokenSet" pos="2400,-240,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera" TokenValue=""/>
+  </Node>
+  <Node Id="1397" Class="Mission:GameToken" pos="11185,-95,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera" CompareValue=""/>
+  </Node>
+  <Node Id="1399" Class="Mission:GameToken" pos="4655,2845,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Ref_Move" CompareValue=""/>
+  </Node>
+  <Node Id="1401" Class="Mission:GameTokenSet" pos="5795,2265,0" flags="0">
+   <Inputs gametoken_Token="Vec3_Sphere_Velocity" TokenValue=""/>
+  </Node>
+  <Node Id="1402" Class="Mission:GameToken" pos="9535,35,0" flags="0">
+   <Inputs gametoken_Token="Vec3_Sphere_Velocity" CompareValue=""/>
+  </Node>
+  <Node Id="1406" Class="Entity:GetPos" pos="9925,205,0" flags="0">
+   <Inputs CoordSys="0"/>
+  </Node>
+  <Node Id="1407" Class="Vec3:FromVec3" pos="10295,225,0" flags="0">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1409" Class="Mission:GameToken" pos="9535,205,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera" CompareValue=""/>
+  </Node>
+  <Node Id="1410" Class="Math:Add" pos="11195,55,0" flags="0">
+   <Inputs A="0" B="-2"/>
+  </Node>
+  <Node Id="1414" Class="Logic:Any" pos="6525,-435,0" flags="0" InHideMask="1023" OutHideMask="1">
+   <Inputs />
+  </Node>
+  <Node Id="1422" Class="Mission:GameTokenSet" pos="5405,2875,0" flags="0">
+   <Inputs gametoken_Token="Vec3_Ref_Move_ForwardDirection" TokenValue=""/>
+  </Node>
+  <Node Id="1423" Class="Mission:GameToken" pos="6325,-595,0" flags="0">
+   <Inputs gametoken_Token="Vec3_Ref_Move_ForwardDirection" CompareValue=""/>
+  </Node>
+  <Node Id="1447" Class="Vec3:ToVec3" pos="7225,65,0" flags="0" InHideMask="7" OutHideMask="1">
+   <Inputs x="0" y="0" z="0"/>
+  </Node>
+  <Node Id="1448" Class="Entity:GetPos" pos="7665,-35,0" flags="0" InHideMask="7" OutHideMask="63">
+   <Inputs CoordSys="0"/>
+  </Node>
+  <Node Id="1449" Class="Vec3:SubVec3" pos="7855,5,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="1450" Class="Entity:EntityPos" pos="8355,-135,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="1451" Class="Math:Mul" pos="6145,95,0" flags="0">
+   <Inputs A="0" B="0.3"/>
+  </Node>
+  <Node Id="1455" Class="Input:ActionHandler" pos="4675,105,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="xi_rotateyaw"/>
+  </Node>
+  <Node Id="1456" Class="Mission:GameToken" pos="7185,-135,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_ref_Camera_Yaw" CompareValue=""/>
+  </Node>
+  <Node Id="1457" Class="Mission:GameToken" pos="4445,105,0" flags="0" InHideMask="3" OutHideMask="7">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1458" Class="Time:Time" pos="7185,-35,0" flags="0">
+   <Inputs paused="0"/>
+  </Node>
+  <Node Id="1468" Class="Mission:GameToken" pos="7105,-585,0" flags="0" InHideMask="3" OutHideMask="7">
+   <Inputs gametoken_Token="Entity_ID_Sphere" CompareValue=""/>
+  </Node>
+  <Node Id="1478" Class="Entity:GetPos" pos="9795,2545,0" flags="0">
+   <Inputs CoordSys="0"/>
+  </Node>
+  <Node Id="1480" Class="Entity:EntityPos" pos="10855,2585,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="1481" Class="Mission:GameToken" pos="10695,2495,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_ref_Camera_Yaw" CompareValue=""/>
+  </Node>
+  <Node Id="1482" Class="Time:Time" pos="9455,2635,0" flags="0">
+   <Inputs paused="0"/>
+  </Node>
+  <Node Id="1484" Class="Mission:GameToken" pos="9325,2505,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Ref_Move" CompareValue=""/>
+  </Node>
+  <Node Id="1487" Class="Mission:GameTokenSet" pos="2400,-120,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_ref_Camera_Yaw" TokenValue=""/>
+  </Node>
+  <Node Id="1503" Class="Mission:GameToken" pos="9305,2905,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_ref_Camera_Yaw" CompareValue=""/>
+  </Node>
+  <Node Id="1504" Class="Time:Time" pos="9485,3075,0" flags="0">
+   <Inputs paused="0"/>
+  </Node>
+  <Node Id="1505" Class="Entity:GetPos" pos="9775,2995,0" flags="0">
+   <Inputs CoordSys="0"/>
+  </Node>
+  <Node Id="1506" Class="Interpolate:SmoothAngleVec3" pos="10145,2985,0" flags="0">
+   <Inputs InitialValue="0,0,0" TargetValue="0,0,0" Time="0.5"/>
+  </Node>
+  <Node Id="1507" Class="Mission:GameToken" pos="10045,2885,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Ref_Move" CompareValue=""/>
+  </Node>
+  <Node Id="1508" Class="Entity:EntityPos" pos="10865,2875,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="1513" Class="Debug:DisplayMessage" pos="12645,2235,0" flags="0" InHideMask="1023" OutHideMask="3">
+   <Inputs message="" DisplayTime="0" posX="500" posY="400" fontSize="2" clr_Color="1,1,1" centered="0"/>
+  </Node>
+  <Node Id="1519" Class="Engine:Viewport" pos="12775,2125,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="1522" Class="Mission:GameToken" pos="12455,2115,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1523" Class="Math:Div" pos="12995,2095,0" flags="0">
+   <Inputs A="0" B="2"/>
+  </Node>
+  <Node Id="1524" Class="Math:Div" pos="12995,2185,0" flags="0">
+   <Inputs A="0" B="2"/>
+  </Node>
+  <Node Id="1539" Class="Entity:EntityPos" pos="3580,-245,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="1541" Class="VR:TransformInfo" pos="2965,-220,0" flags="0">
+   <Inputs Enabled="1"/>
+  </Node>
+  <Node Id="1548" Class="Entity:EntityPos" pos="7535,2655,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="1555" Class="Vec3:ScaleVec3" pos="7405,55,0" flags="0">
+   <Inputs vector="0,0,0" scale="1"/>
+  </Node>
+  <Node Id="1557" Class="Math:Mul" pos="4870,790,0" flags="0">
+   <Inputs A="1" B="-0.01"/>
+  </Node>
+  <Node Id="1558" Class="Math:Add" pos="6905,75,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1560" Class="Vec3:FromVec3" pos="4330,920,0" flags="0" InHideMask="1" OutHideMask="7">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1564" Class="Math:Mul" pos="4630,790,0" flags="0">
+   <Inputs A="0" B="-0.0008"/>
+  </Node>
+  <Node Id="1568" Class="Mission:GameTokenSet" pos="5915,2525,0" flags="0">
+   <Inputs gametoken_Token="Forward_or_Back" TokenValue=""/>
+  </Node>
+  <Node Id="1569" Class="Mission:GameToken" pos="9535,-115,0" flags="0">
+   <Inputs gametoken_Token="Forward_or_Back" CompareValue="True"/>
+  </Node>
+  <Node Id="1571" Class="Math:Less" pos="5445,2525,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1573" Class="Entity:GetPos" pos="4965,2475,0" flags="0">
+   <Inputs CoordSys="1"/>
+  </Node>
+  <Node Id="1591" Class="Mission:GameToken" pos="4785,2665,0" flags="0">
+   <Inputs gametoken_Token="Vec3_Sphere_Velocity" CompareValue=""/>
+  </Node>
+  <Node Id="1592" Class="Vec3:DotVec3" pos="5255,2525,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="1593" Class="Logic:NOT" pos="5645,2525,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1600" Class="Logic:Gate" pos="10145,-95,0" flags="0">
+   <Inputs Closed="0"/>
+  </Node>
+  <Node Id="1603" Class="Logic:NOT" pos="5775,2525,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1605" Class="Math:SetNumber" pos="5845,-365,0" flags="0">
+   <Inputs In="60"/>
+  </Node>
+  <Node Id="1611" Class="Math:SetNumber" pos="6205,-485,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1627" Class="Vec3:AddVec3" pos="10455,2555,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0.1"/>
+  </Node>
+  <Node Id="1629" Class="Interpolate:SmoothFloat" pos="6415,95,0" flags="0">
+   <Inputs InitialValue="0" TargetValue="0" Time="0.2"/>
+  </Node>
+  <Node Id="1630" Class="Interpolate:Float" pos="5830,800,0" flags="0">
+   <Inputs StartValue="0" EndValue="0" Time="1" UpdateFrequency="0"/>
+  </Node>
+  <Node Id="1633" Name="Physics deceleration for the sphere" Class="_blackbox" pos="4530,2050,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="904" Node1="906" Node2="923" Node3="924" Node4="1087" Node5="1089" Node6="1401"/>
+  </Node>
+  <Node Id="1634" Class="Math:Mul" pos="6715,195,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1635" Class="Math:Abs" pos="6160,810,0" flags="0">
+   <Inputs A="0"/>
+  </Node>
+  <Node Id="1636" Class="Math:Clamp" pos="6330,810,0" flags="0">
+   <Inputs In="0" Min="0" Max="3"/>
+  </Node>
+  <Node Id="1651" Class="Math:Mul" pos="10685,185,0" flags="0">
+   <Inputs A="0" B="0.1"/>
+  </Node>
+  <Node Id="1657" Name="Interpolate Reference Move to look direction of Camera Yaw Reference" Class="_blackbox" pos="9260,2830,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1503" Node1="1504" Node2="1505" Node3="1506" Node4="1507" Node5="1508"/>
+  </Node>
+  <Node Id="1658" Name="Known Bug: Interpolating while turning right causes flip at certain world look vector. " Class="_comment" pos="10110,3110,0" flags="0"/>
+  <Node Id="1659" Class="Vec3:FromVec3" pos="9660,860,0" flags="0">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1663" Name="Reference move offset." Class="_comment" pos="10190,2130,0" flags="0"/>
+  <Node Id="1664" Class="Vec3:ToVec3" pos="11470,820,0" flags="0">
+   <Inputs x="0" y="0" z="0"/>
+  </Node>
+  <Node Id="1666" Class="Entity:EntityPos" pos="11890,800,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="1676" Class="Math:Mul" pos="10730,840,0" flags="0">
+   <Inputs A="0" B="3.6"/>
+  </Node>
+  <Node Id="1681" Class="Vec3:AddVec3" pos="11670,820,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,1"/>
+  </Node>
+  <Node Id="1696" Class="VR:TransformInfo" pos="7125,2645,0" flags="0">
+   <Inputs Enabled="1"/>
+  </Node>
+  <Node Id="1697" Name="Robot Head mirrors your head movement." Class="_blackbox" pos="7080,2600,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1548" Node1="1696"/>
+  </Node>
+  <Node Id="1698" Class="VR:TransformInfo" pos="9330,800,0" flags="0">
+   <Inputs Enabled="1"/>
+  </Node>
+  <Node Id="1700" Name="Move Camera position offset based on velocity" Class="_blackbox" pos="9490,-160,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="202" Node1="214" Node2="215" Node3="217" Node4="220" Node5="221" Node6="1055" Node7="1397" Node8="1402" Node9="1406" Node10="1407" Node11="1409" Node12="1410" Node13="1569" Node14="1600" Node15="1651"/>
+  </Node>
+  <Node Id="1701" Class="Debug:DisplayMessage" pos="13045,2335,0" flags="0" InHideMask="1023" OutHideMask="3">
+   <Inputs message="" DisplayTime="0" posX="500" posY="400" fontSize="2" clr_Color="1,1,1" centered="0"/>
+  </Node>
+  <Node Id="1703" Class="Math:Add" pos="13195,2185,0" flags="0">
+   <Inputs A="0" B="30"/>
+  </Node>
+  <Node Id="1716" Class="Math:Div" pos="10020,860,0" flags="0">
+   <Inputs A="0" B="-80"/>
+  </Node>
+  <Node Id="1717" Class="Math:Clamp" pos="9840,860,0" flags="0">
+   <Inputs In="0" Min="-80" Max="0"/>
+  </Node>
+  <Node Id="1719" Class="Math:Mul" pos="10390,840,0" flags="0">
+   <Inputs A="0" B="1"/>
+  </Node>
+  <Node Id="1722" Class="Math:Abs" pos="11140,510,0" flags="0">
+   <Inputs A="0"/>
+  </Node>
+  <Node Id="1723" Name="Set reference Camera Yaw to be at same position as reference move + offset" Class="_blackbox" pos="9280,2450,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1478" Node1="1480" Node2="1481" Node3="1482" Node4="1484" Node5="1627"/>
+  </Node>
+  <Node Id="1724" Name="Multiply by itself  to \nmake the releationship exponetial" Class="_comment" pos="10390,790,0" flags="0"/>
+  <Node Id="1754" Class="Entity:EntityPos" pos="8695,2175,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,180" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="1758" Class="Vec3:AddVec3" pos="8195,2115,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="1759" Class="Interpolate:SmoothAngleVec3" pos="8405,2385,0" flags="0">
+   <Inputs InitialValue="0,0,0" TargetValue="0,0,0" Time="0.2"/>
+  </Node>
+  <Node Id="1760" Class="Vec3:AddVec3" pos="7685,2405,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,90"/>
+  </Node>
+  <Node Id="1761" Class="Time:Time" pos="7135,2385,0" flags="0">
+   <Inputs paused="0"/>
+  </Node>
+  <Node Id="1762" Class="Entity:GetPos" pos="7395,2385,0" flags="0">
+   <Inputs CoordSys="1"/>
+  </Node>
+  <Node Id="1763" Class="Vec3:FromVec3" pos="7845,2405,0" flags="0">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1764" Class="Vec3:ToVec3" pos="8215,2415,0" flags="0">
+   <Inputs x="0" y="0" z="0"/>
+  </Node>
+  <Node Id="1766" Class="Math:Mul" pos="8035,2345,0" flags="0">
+   <Inputs A="0" B="-1"/>
+  </Node>
+  <Node Id="1779" Class="Mission:GameToken" pos="7405,2095,0" flags="0">
+   <Inputs gametoken_Token="Pos_Sphere_World" CompareValue=""/>
+  </Node>
+  <Node Id="1780" Name="Animate robot body" Class="_blackbox" pos="7090,2050,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1754" Node1="1758" Node2="1759" Node3="1760" Node4="1761" Node5="1762" Node6="1763" Node7="1764" Node8="1766" Node9="1779"/>
+  </Node>
+  <Node Id="1781" Class="Math:Less" pos="5605,-345,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1784" Class="Math:SetNumber" pos="5845,-295,0" flags="0">
+   <Inputs In="15"/>
+  </Node>
+  <Node Id="1785" Class="Logic:Any" pos="6025,-335,0" flags="0" InHideMask="1023" OutHideMask="1">
+   <Inputs />
+  </Node>
+  <Node Id="1786" Name="Xbox move forward &amp; backward\n" Class="_blackbox" pos="4400,-640,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="991" Node1="1076" Node2="1077" Node3="1078" Node4="1080" Node5="1083" Node6="1093" Node7="1414" Node8="1423" Node9="1468" Node10="1605" Node11="1611" Node12="1781" Node13="1784" Node14="1785"/>
+  </Node>
+  <Node Id="1794" Class="Interpolate:Float" pos="5520,1130,0" flags="0">
+   <Inputs StartValue="0" EndValue="0" Time="1" UpdateFrequency="0"/>
+  </Node>
+  <Node Id="1795" Class="Math:Abs" pos="5850,1120,0" flags="0">
+   <Inputs A="0"/>
+  </Node>
+  <Node Id="1796" Class="Math:Clamp" pos="6030,1120,0" flags="0">
+   <Inputs In="0" Min="0" Max="1"/>
+  </Node>
+  <Node Id="1797" Class="Math:Mul" pos="4950,1150,0" flags="0">
+   <Inputs A="1" B="-0.01"/>
+  </Node>
+  <Node Id="1798" Class="Math:Mul" pos="4690,1150,0" flags="0">
+   <Inputs A="0" B="-0.0008"/>
+  </Node>
+  <Node Id="1800" Class="Math:Add" pos="6540,810,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1801" Name="Factor in head rotation into turn speed" Class="_comment" pos="5830,780,0" flags="0"/>
+  <Node Id="1802" Name="Factor in head lean into turn speed." Class="_comment" pos="5520,1100,0" flags="0"/>
+  <Node Id="1803" Name="Change this number to move\nforward as you look down. " Class="_comment" pos="10730,790,0" flags="0"/>
+  <Node Id="1804" Name="Change this to offset\nthe camera start position" Class="_comment" pos="10380,2640,0" flags="0"/>
+  <Node Id="1805" Name="Joystick turn multiplier" Class="_comment" pos="6110,70,0" flags="0"/>
+  <Node Id="1806" Class="Vec3:ScaleVec3" pos="7675,1115,0" flags="0">
+   <Inputs vector="0,0,0" scale="160"/>
+  </Node>
+  <Node Id="1808" Class="Physics:ActionImpulse" pos="7925,1095,0" flags="0">
+   <Inputs Impulse="100,0,0" AngularImpulse="0,0,0" Point="0,0,0" PartIndex="0" CoordSystem="1"/>
+  </Node>
+  <Node Id="1809" Class="Mission:GameToken" pos="7745,965,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Sphere" CompareValue=""/>
+  </Node>
+  <Node Id="1810" Class="Mission:GameTokenSet" pos="5405,2995,0" flags="0">
+   <Inputs gametoken_Token="Vec3_Ref_Move_RightDirection" TokenValue=""/>
+  </Node>
+  <Node Id="1811" Class="Mission:GameToken" pos="7205,1005,0" flags="0">
+   <Inputs gametoken_Token="Vec3_Ref_Move_RightDirection" CompareValue=""/>
+  </Node>
+  <Node Id="1812" Class="Math:Mul" pos="7195,1135,0" flags="0">
+   <Inputs A="0" B="-5"/>
+  </Node>
+  <Node Id="1816" Class="Mission:GameToken" pos="3970,1830,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1818" Class="Mission:GameToken" pos="6600,1910,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue="0"/>
+  </Node>
+  <Node Id="1820" Class="Logic:NOT" pos="6910,1950,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1825" Class="Math:Less" pos="5325,415,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1830" Class="Math:Less" pos="5325,565,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1833" Name="If yaw negative then true" Class="_comment" pos="5300,390,0" flags="0"/>
+  <Node Id="1834" Name="If hmd yaw negative then true" Class="_comment" pos="5300,540,0" flags="0"/>
+  <Node Id="1836" Class="Math:BooleanFrom" pos="5580,800,0" flags="0">
+   <Inputs Value="0"/>
+  </Node>
+  <Node Id="1840" Class="Logic:AND" pos="5625,395,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1841" Class="Logic:Any" pos="12855,2325,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="1842" Class="Logic:Any" pos="12475,2275,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="1843" Name="Draw debug text at center of screen" Class="_blackbox" pos="12410,2050,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1513" Node1="1519" Node2="1522" Node3="1523" Node4="1524" Node5="1701" Node6="1703" Node7="1841" Node8="1842"/>
+  </Node>
+  <Node Id="1845" Class="Logic:AND" pos="5765,565,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1846" Class="Logic:NOT" pos="5625,565,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1847" Class="Logic:NOT" pos="5625,605,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1848" Class="Logic:Any" pos="5440,800,0" flags="0" InHideMask="1023" OutHideMask="1">
+   <Inputs />
+  </Node>
+  <Node Id="1852" Name="Strafe factor based on head roll. " Class="_blackbox" pos="7150,920,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1806" Node1="1808" Node2="1809" Node3="1811" Node4="1812"/>
+  </Node>
+  <Node Id="1855" Name="Logic Test: Only use HMD yaw to accelerate\nrobot turning if the gamepad turn direction\nis aligned with the HMD yaw direction. " Class="_comment" pos="5600,500,0" flags="0"/>
+  <Node Id="1859" Class="Input:ActionHandler" pos="7450,460,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="jump"/>
+  </Node>
+  <Node Id="1865" Class="Vec3:FromVec3" pos="4150,840,0" flags="0" InHideMask="1" OutHideMask="7">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1866" Class="Math:Abs" pos="4330,840,0" flags="0">
+   <Inputs A="0"/>
+  </Node>
+  <Node Id="1867" Class="VR:TransformInfo" pos="3790,840,0" flags="0">
+   <Inputs Enabled="1"/>
+  </Node>
+  <Node Id="1868" Class="Vec3:SetVec3" pos="8035,-45,0" flags="0">
+   <Inputs In="0,0,0"/>
+  </Node>
+  <Node Id="1869" Class="Vec3:SetVec3" pos="7830,480,0" flags="0">
+   <Inputs In="0,0,0"/>
+  </Node>
+  <Node Id="1871" Class="Vec3:ToVec3" pos="7630,600,0" flags="0">
+   <Inputs x="0" y="0" z="0"/>
+  </Node>
+  <Node Id="1874" Class="VR:TransformInfo" pos="7110,580,0" flags="0">
+   <Inputs Enabled="1"/>
+  </Node>
+  <Node Id="1875" Class="Vec3:FromVec3" pos="7480,600,0" flags="0">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1880" Class="Logic:Any" pos="8195,-45,0" flags="0" InHideMask="1023" OutHideMask="1">
+   <Inputs />
+  </Node>
+  <Node Id="1881" Name="Final Camera Offset" Class="_comment" pos="11620,790,0" flags="0"/>
+  <Node Id="1882" Class="VR:TransformInfo" pos="9910,1070,0" flags="0">
+   <Inputs Enabled="1"/>
+  </Node>
+  <Node Id="1883" Class="Vec3:FromVec3" pos="10210,1130,0" flags="0">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1888" Class="Math:Mul" pos="11010,840,0" flags="0">
+   <Inputs A="0" B="1"/>
+  </Node>
+  <Node Id="1895" Class="Math:Clamp" pos="10550,1130,0" flags="0">
+   <Inputs In="0" Min="0" Max="1"/>
+  </Node>
+  <Node Id="1897" Class="Math:Cosine" pos="10380,1130,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1898" Class="Math:Mul" pos="10710,1130,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1899" Name="Scale the amount the \ncamera moves forward \nby how much you are looking L/R" Class="_comment" pos="10550,1050,0" flags="0"/>
+  <Node Id="1901" Class="Vec3:ToVec3" pos="3440,-145,0" flags="0">
+   <Inputs x="0" y="0" z="0"/>
+  </Node>
+  <Node Id="1902" Class="Vec3:FromVec3" pos="3280,-135,0" flags="0" InHideMask="1" OutHideMask="7">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1903" Class="Vec3:FromVec3" pos="3280,-185,0" flags="0" InHideMask="1" OutHideMask="7">
+   <Inputs vec3="0,0,0"/>
+  </Node>
+  <Node Id="1906" Name="Ghetto fix for reticule when looking down. " Class="_comment" pos="2910,-90,0" flags="0"/>
+  <Node Id="1908" Name="..." Class="_blackbox" pos="5280,350,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1825" Node1="1830" Node2="1840" Node3="1845" Node4="1846" Node5="1847"/>
+  </Node>
+  <Node Id="1909" Name="Diabled atm" Class="_comment" pos="7150,1110,0" flags="0"/>
+  <Node Id="1910" Class="Math:Div" pos="10210,910,0" flags="0" InHideMask="7" OutHideMask="1">
+   <Inputs A="0" B="1.2"/>
+  </Node>
+  <Node Id="1911" Name="Set Camera" Class="_comment" pos="3365,-655,0" flags="0"/>
+  <Node Id="1912" Name="Camera" Class="_comment" pos="2400,-270,0" flags="0"/>
+  <Node Id="1913" Name="Reference Move" Class="_comment" pos="2400,-400,0" flags="0"/>
+  <Node Id="1914" Name="Sphere" Class="_comment" pos="2400,-540,0" flags="0"/>
+  <Node Id="1915" Name="Camera Yaw" Class="_comment" pos="2400,-150,0" flags="0"/>
+  <Node Id="1916" Name="Camera Fulcrum" Class="_comment" pos="2400,-20,0" flags="0"/>
+  <Node Id="1917" Name="HMD_Fulcrum" Class="_comment" pos="2400,110,0" flags="0"/>
+  <Node Id="1918" Class="Mission:GameTokenSet" pos="2400,10,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera_Fulcrum" TokenValue=""/>
+  </Node>
+  <Node Id="1919" Class="Mission:GameTokenSet" pos="2400,140,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_HMD_Fulcrum" TokenValue=""/>
+  </Node>
+  <Node Id="1920" Class="Mission:GameToken" pos="2965,-625,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera" CompareValue=""/>
+  </Node>
+  <Node Id="1921" Class="Mission:GameToken" pos="11890,740,0" flags="0" InHideMask="3" OutHideMask="7">
+   <Inputs gametoken_Token="Entity_ID_Camera_Fulcrum" CompareValue=""/>
+  </Node>
+  <Node Id="1922" Class="Mission:GameToken" pos="3370,-285,0" flags="0" InHideMask="3" OutHideMask="7">
+   <Inputs gametoken_Token="Entity_ID_HMD_Fulcrum" CompareValue=""/>
+  </Node>
+  <Node Id="1923" Name="HMD Reticule" Class="_blackbox" pos="2920,-330,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1539" Node1="1541" Node2="1901" Node3="1902" Node4="1903" Node5="1922"/>
+  </Node>
+  <Node Id="1924" Class="Mission:GameTokenSet" pos="2400,270,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Head_Tilt_Parent" TokenValue=""/>
+  </Node>
+  <Node Id="1925" Name="Head Tilt Parent" Class="_comment" pos="2400,240,0" flags="0"/>
+  <Node Id="1926" Class="Mission:GameToken" pos="6600,1780,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Head_Tilt_Parent" CompareValue=""/>
+  </Node>
+  <Node Id="1928" Name="Robot Body" Class="_comment" pos="2400,370,0" flags="0"/>
+  <Node Id="1930" Class="Mission:GameToken" pos="8510,2070,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Robot_Body" CompareValue=""/>
+  </Node>
+  <Node Id="1931" Class="Mission:GameToken" pos="4575,2465,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Ref_Move" CompareValue=""/>
+  </Node>
+  <Node Id="1932" Class="Mission:GameTokenSet" pos="2400,400,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Robot_Body" TokenValue=""/>
+  </Node>
+  <Node Id="1933" Name="Determine is robot if moving forward or backward and set the token. " Class="_blackbox" pos="4530,2420,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1568" Node1="1571" Node2="1573" Node3="1591" Node4="1592" Node5="1593" Node6="1603" Node7="1931"/>
+  </Node>
+  <Node Id="1936" Name="Get Direction of the reference move\n " Class="_blackbox" pos="4520,2800,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="998" Node1="1086" Node2="1399" Node3="1422" Node4="1810"/>
+  </Node>
+  <Node Id="1937" Class="Logic:NOT" pos="4270,1870,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1939" Name="Set Camera" Class="_blackbox" pos="2920,-700,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1084" Node1="1911" Node2="1920"/>
+  </Node>
+  <Node Id="1940" Class="Logic:NOT" pos="9080,1890,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1941" Class="Mission:GameToken" pos="8760,1840,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1944" Class="Mission:GameToken" pos="7110,460,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue="0"/>
+  </Node>
+  <Node Id="1946" Class="Mission:GameToken" pos="6595,-125,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue="0"/>
+  </Node>
+  <Node Id="1947" Class="Logic:NOT" pos="6895,-85,0" flags="0">
+   <Inputs In="0"/>
+  </Node>
+  <Node Id="1948" Name="Rotate Xbox Yaw" Class="_blackbox" pos="4400,-180,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1100" Node1="1101" Node2="1447" Node3="1448" Node4="1449" Node5="1450" Node6="1451" Node7="1455" Node8="1456" Node9="1457" Node10="1458" Node11="1555" Node12="1558" Node13="1629" Node14="1634" Node15="1868" Node16="1880" Node17="1946" Node18="1947"/>
+  </Node>
+  <Node Id="1953" Class="Math:Mul" pos="11260,820,0" flags="0">
+   <Inputs A="0" B="0"/>
+  </Node>
+  <Node Id="1954" Class="Math:Add" pos="11340,490,0" flags="0">
+   <Inputs A="0" B="1"/>
+  </Node>
+  <Node Id="1955" Class="Math:Clamp" pos="11550,490,0" flags="0">
+   <Inputs In="0" Min="1" Max="1.6"/>
+  </Node>
+  <Node Id="1957" Name="ON_Call" Class="_blackbox" pos="1215,-685,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1" Node1="2" Node2="1088" Node3="1092" Node4="1384" Node5="1392" Node6="1487" Node7="1912" Node8="1913" Node9="1914" Node10="1915" Node11="1916" Node12="1917" Node13="1918" Node14="1919" Node15="1924" Node16="1925" Node17="1928" Node18="1932"/>
+  </Node>
+  <Node Id="1958" Name="Plug multiply out to time in interpolate\nfor a blend based on velocity change. " Class="_comment" pos="10600,280,0" flags="0"/>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="1088" nodeOut="1" portIn="Activate" portOut="Sphere" enabled="1"/>
+  <Edge nodeIn="1088" nodeOut="1" portIn="TokenValue" portOut="Sphere" enabled="1"/>
+  <Edge nodeIn="1092" nodeOut="1" portIn="Activate" portOut="Start" enabled="1"/>
+  <Edge nodeIn="1092" nodeOut="1" portIn="TokenValue" portOut="Start" enabled="1"/>
+  <Edge nodeIn="1384" nodeOut="1" portIn="Activate" portOut="Ref_Move" enabled="1"/>
+  <Edge nodeIn="1384" nodeOut="1" portIn="TokenValue" portOut="Ref_Move" enabled="1"/>
+  <Edge nodeIn="1392" nodeOut="1" portIn="Activate" portOut="Camera" enabled="1"/>
+  <Edge nodeIn="1392" nodeOut="1" portIn="TokenValue" portOut="Camera" enabled="1"/>
+  <Edge nodeIn="1487" nodeOut="1" portIn="Activate" portOut="Ref_Camera_Yaw" enabled="1"/>
+  <Edge nodeIn="1487" nodeOut="1" portIn="TokenValue" portOut="Ref_Camera_Yaw" enabled="1"/>
+  <Edge nodeIn="1918" nodeOut="1" portIn="Activate" portOut="Camera_Fulcrum" enabled="1"/>
+  <Edge nodeIn="1918" nodeOut="1" portIn="TokenValue" portOut="Camera_Fulcrum" enabled="1"/>
+  <Edge nodeIn="1919" nodeOut="1" portIn="Activate" portOut="HMD_Fulcrum" enabled="1"/>
+  <Edge nodeIn="1919" nodeOut="1" portIn="TokenValue" portOut="HMD_Fulcrum" enabled="1"/>
+  <Edge nodeIn="1924" nodeOut="1" portIn="Activate" portOut="Head_Tilt_Parent" enabled="1"/>
+  <Edge nodeIn="1924" nodeOut="1" portIn="TokenValue" portOut="Head_Tilt_Parent" enabled="1"/>
+  <Edge nodeIn="1932" nodeOut="1" portIn="Activate" portOut="Robot_Body" enabled="1"/>
+  <Edge nodeIn="1932" nodeOut="1" portIn="TokenValue" portOut="Robot_Body" enabled="1"/>
+  <Edge nodeIn="217" nodeOut="202" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="217" nodeOut="202" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="220" nodeOut="202" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="214" nodeOut="215" portIn="pos" portOut="Result" enabled="1"/>
+  <Edge nodeIn="220" nodeOut="217" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="221" nodeOut="220" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="221" nodeOut="220" portIn="TargetValue" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1410" nodeOut="221" portIn="A" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1410" nodeOut="221" portIn="Activate" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1722" nodeOut="221" portIn="A" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1722" nodeOut="221" portIn="Activate" portOut="Value" enabled="1"/>
+  <Edge nodeIn="904" nodeOut="906" portIn="Activate" portOut="out" enabled="1"/>
+  <Edge nodeIn="904" nodeOut="906" portIn="Impulse" portOut="out" enabled="1"/>
+  <Edge nodeIn="924" nodeOut="923" portIn="x" portOut="x" enabled="1"/>
+  <Edge nodeIn="924" nodeOut="923" portIn="y" portOut="y" enabled="1"/>
+  <Edge nodeIn="906" nodeOut="924" portIn="vector" portOut="Result" enabled="1"/>
+  <Edge nodeIn="992" nodeOut="988" portIn="A" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="992" nodeOut="988" portIn="Activate" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="1382" nodeOut="988" portIn="Activate" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="1382" nodeOut="988" portIn="TokenValue" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="1028" nodeOut="992" portIn="pos" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1422" nodeOut="998" portIn="Activate" portOut="FwdDir" enabled="1"/>
+  <Edge nodeIn="1422" nodeOut="998" portIn="TokenValue" portOut="FwdDir" enabled="1"/>
+  <Edge nodeIn="1810" nodeOut="998" portIn="Activate" portOut="RightDir" enabled="1"/>
+  <Edge nodeIn="1810" nodeOut="998" portIn="TokenValue" portOut="RightDir" enabled="1"/>
+  <Edge nodeIn="202" nodeOut="1055" portIn="Activate" portOut="length" enabled="1"/>
+  <Edge nodeIn="1600" nodeOut="1055" portIn="In" portOut="length" enabled="1"/>
+  <Edge nodeIn="991" nodeOut="1076" portIn="Activate" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1077" nodeOut="1076" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1080" nodeOut="1076" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1080" nodeOut="1076" portIn="Activate" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1781" nodeOut="1076" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1414" nodeOut="1077" portIn="In1" portOut="Out" enabled="1"/>
+  <Edge nodeIn="991" nodeOut="1078" portIn="Impulse" portOut="out" enabled="1"/>
+  <Edge nodeIn="1083" nodeOut="1080" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1083" nodeOut="1080" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1611" nodeOut="1083" portIn="Activate" portOut="OnFalse" enabled="1"/>
+  <Edge nodeIn="1781" nodeOut="1083" portIn="Activate" portOut="OnTrue" enabled="1"/>
+  <Edge nodeIn="998" nodeOut="1086" portIn="Get" portOut="tick" enabled="1"/>
+  <Edge nodeIn="923" nodeOut="1087" portIn="vec3" portOut="Velocity" enabled="1"/>
+  <Edge nodeIn="1401" nodeOut="1087" portIn="Activate" portOut="Velocity" enabled="1"/>
+  <Edge nodeIn="1401" nodeOut="1087" portIn="TokenValue" portOut="Velocity" enabled="1"/>
+  <Edge nodeIn="904" nodeOut="1089" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1087" nodeOut="1089" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1087" nodeOut="1089" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1076" nodeOut="1093" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1101" nodeOut="1100" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1101" nodeOut="1100" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1451" nodeOut="1101" portIn="Activate" portOut="OnTrue" enabled="1"/>
+  <Edge nodeIn="1327" nodeOut="1331" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1331" nodeOut="1332" portIn="In1" portOut="Pressed" enabled="1"/>
+  <Edge nodeIn="1331" nodeOut="1340" portIn="In0" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1028" nodeOut="1350" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="988" nodeOut="1376" portIn="Get" portOut="tick" enabled="1"/>
+  <Edge nodeIn="988" nodeOut="1385" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="214" nodeOut="1397" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="998" nodeOut="1399" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1055" nodeOut="1402" portIn="vector" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1407" nodeOut="1406" portIn="vec3" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="220" nodeOut="1407" portIn="B" portOut="x" enabled="1"/>
+  <Edge nodeIn="1406" nodeOut="1409" portIn="Get" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1406" nodeOut="1409" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="215" nodeOut="1410" portIn="y" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1078" nodeOut="1414" portIn="scale" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1078" nodeOut="1423" portIn="vector" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1555" nodeOut="1447" portIn="vector" portOut="Result" enabled="1"/>
+  <Edge nodeIn="1449" nodeOut="1448" portIn="A" portOut="Rotate" enabled="1"/>
+  <Edge nodeIn="1868" nodeOut="1449" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1868" nodeOut="1449" portIn="Set" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1629" nodeOut="1451" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1629" nodeOut="1451" portIn="TargetValue" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1634" nodeOut="1451" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1100" nodeOut="1455" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1100" nodeOut="1455" portIn="Activate" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1451" nodeOut="1455" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1825" nodeOut="1455" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1825" nodeOut="1455" portIn="Activate" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1448" nodeOut="1456" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1450" nodeOut="1456" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1455" nodeOut="1457" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1448" nodeOut="1458" portIn="Get" portOut="tick" enabled="1"/>
+  <Edge nodeIn="991" nodeOut="1468" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1627" nodeOut="1478" portIn="A" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="1627" nodeOut="1478" portIn="Activate" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="1480" nodeOut="1481" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1478" nodeOut="1482" portIn="Get" portOut="tick" enabled="1"/>
+  <Edge nodeIn="1478" nodeOut="1484" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1505" nodeOut="1503" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1505" nodeOut="1504" portIn="Get" portOut="tick" enabled="1"/>
+  <Edge nodeIn="1506" nodeOut="1505" portIn="Activate" portOut="Rotate" enabled="1"/>
+  <Edge nodeIn="1506" nodeOut="1505" portIn="TargetValue" portOut="Rotate" enabled="1"/>
+  <Edge nodeIn="1508" nodeOut="1506" portIn="rotate" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1508" nodeOut="1507" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1523" nodeOut="1519" portIn="A" portOut="width" enabled="1"/>
+  <Edge nodeIn="1523" nodeOut="1519" portIn="Activate" portOut="width" enabled="1"/>
+  <Edge nodeIn="1524" nodeOut="1519" portIn="A" portOut="height" enabled="1"/>
+  <Edge nodeIn="1524" nodeOut="1519" portIn="Activate" portOut="height" enabled="1"/>
+  <Edge nodeIn="1519" nodeOut="1522" portIn="Get" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1513" nodeOut="1523" portIn="posX" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1701" nodeOut="1523" portIn="posX" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1513" nodeOut="1524" portIn="posY" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1703" nodeOut="1524" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1703" nodeOut="1524" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1539" nodeOut="1541" portIn="pos" portOut="Camera pos" enabled="1"/>
+  <Edge nodeIn="1902" nodeOut="1541" portIn="vec3" portOut="HMD rot (PRY)" enabled="1"/>
+  <Edge nodeIn="1903" nodeOut="1541" portIn="vec3" portOut="Camera rot (PRY)" enabled="1"/>
+  <Edge nodeIn="1449" nodeOut="1555" portIn="Activate" portOut="out" enabled="1"/>
+  <Edge nodeIn="1449" nodeOut="1555" portIn="B" portOut="out" enabled="1"/>
+  <Edge nodeIn="1630" nodeOut="1557" portIn="StartValue" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1830" nodeOut="1557" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1830" nodeOut="1557" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1447" nodeOut="1558" portIn="z" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1557" nodeOut="1560" portIn="Activate" portOut="z" enabled="1"/>
+  <Edge nodeIn="1557" nodeOut="1560" portIn="B" portOut="z" enabled="1"/>
+  <Edge nodeIn="1564" nodeOut="1560" portIn="Activate" portOut="z" enabled="1"/>
+  <Edge nodeIn="1797" nodeOut="1560" portIn="Activate" portOut="y" enabled="1"/>
+  <Edge nodeIn="1797" nodeOut="1560" portIn="B" portOut="y" enabled="1"/>
+  <Edge nodeIn="1798" nodeOut="1560" portIn="Activate" portOut="y" enabled="1"/>
+  <Edge nodeIn="1557" nodeOut="1564" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1600" nodeOut="1569" portIn="Closed" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1593" nodeOut="1571" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1592" nodeOut="1573" portIn="B" portOut="FwdDir" enabled="1"/>
+  <Edge nodeIn="1573" nodeOut="1591" portIn="Get" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1592" nodeOut="1591" portIn="A" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1592" nodeOut="1591" portIn="Activate" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1571" nodeOut="1592" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1571" nodeOut="1592" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1603" nodeOut="1593" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="202" nodeOut="1600" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1651" nodeOut="1600" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1651" nodeOut="1600" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1568" nodeOut="1603" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1568" nodeOut="1603" portIn="TokenValue" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1785" nodeOut="1605" portIn="In0" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1414" nodeOut="1611" portIn="In0" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1480" nodeOut="1627" portIn="pos" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1558" nodeOut="1629" portIn="A" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1634" nodeOut="1629" portIn="A" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1635" nodeOut="1630" portIn="A" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1635" nodeOut="1630" portIn="Activate" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1558" nodeOut="1634" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1558" nodeOut="1634" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1636" nodeOut="1635" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1800" nodeOut="1636" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1800" nodeOut="1636" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1717" nodeOut="1659" portIn="In" portOut="x" enabled="1"/>
+  <Edge nodeIn="1681" nodeOut="1664" portIn="A" portOut="Result" enabled="1"/>
+  <Edge nodeIn="1681" nodeOut="1664" portIn="Activate" portOut="Result" enabled="1"/>
+  <Edge nodeIn="1888" nodeOut="1676" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1888" nodeOut="1676" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1666" nodeOut="1681" portIn="pos" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1548" nodeOut="1696" portIn="rotate" portOut="HMD rot (PRY)" enabled="1"/>
+  <Edge nodeIn="1659" nodeOut="1698" portIn="vec3" portOut="HMD rot (PRY)" enabled="1"/>
+  <Edge nodeIn="1701" nodeOut="1703" portIn="posY" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1719" nodeOut="1716" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1910" nodeOut="1716" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1910" nodeOut="1716" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1716" nodeOut="1717" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1716" nodeOut="1717" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1676" nodeOut="1719" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1676" nodeOut="1719" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1954" nodeOut="1722" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1954" nodeOut="1722" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1754" nodeOut="1758" portIn="pos" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1754" nodeOut="1759" portIn="rotate" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1763" nodeOut="1760" portIn="vec3" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1762" nodeOut="1761" portIn="Get" portOut="tick" enabled="1"/>
+  <Edge nodeIn="1760" nodeOut="1762" portIn="Activate" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="1760" nodeOut="1762" portIn="A" portOut="Rotate" enabled="1"/>
+  <Edge nodeIn="1764" nodeOut="1763" portIn="x" portOut="y" enabled="1"/>
+  <Edge nodeIn="1764" nodeOut="1763" portIn="z" portOut="z" enabled="1"/>
+  <Edge nodeIn="1766" nodeOut="1763" portIn="A" portOut="x" enabled="1"/>
+  <Edge nodeIn="1766" nodeOut="1763" portIn="Activate" portOut="x" enabled="1"/>
+  <Edge nodeIn="1759" nodeOut="1764" portIn="Activate" portOut="Result" enabled="1"/>
+  <Edge nodeIn="1759" nodeOut="1764" portIn="TargetValue" portOut="Result" enabled="1"/>
+  <Edge nodeIn="1764" nodeOut="1766" portIn="y" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1758" nodeOut="1779" portIn="A" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1758" nodeOut="1779" portIn="Activate" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1605" nodeOut="1781" portIn="Activate" portOut="OnFalse" enabled="1"/>
+  <Edge nodeIn="1784" nodeOut="1781" portIn="Activate" portOut="OnTrue" enabled="1"/>
+  <Edge nodeIn="1785" nodeOut="1784" portIn="In1" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1077" nodeOut="1785" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1077" nodeOut="1785" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1795" nodeOut="1794" portIn="A" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1795" nodeOut="1794" portIn="Activate" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1812" nodeOut="1794" portIn="A" portOut="Value" enabled="1"/>
+  <Edge nodeIn="1812" nodeOut="1794" portIn="Activate" portOut="Value" enabled="0"/>
+  <Edge nodeIn="1796" nodeOut="1795" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1800" nodeOut="1796" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1794" nodeOut="1797" portIn="Start" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1794" nodeOut="1797" portIn="StartValue" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1797" nodeOut="1798" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1634" nodeOut="1800" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1808" nodeOut="1806" portIn="Activate" portOut="out" enabled="1"/>
+  <Edge nodeIn="1808" nodeOut="1806" portIn="Impulse" portOut="out" enabled="1"/>
+  <Edge nodeIn="1808" nodeOut="1809" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1806" nodeOut="1811" portIn="vector" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1806" nodeOut="1812" portIn="scale" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1937" nodeOut="1816" portIn="In" portOut="OnFalse" enabled="1"/>
+  <Edge nodeIn="1820" nodeOut="1818" portIn="In" portOut="OnFalse" enabled="1"/>
+  <Edge nodeIn="1761" nodeOut="1820" portIn="paused" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1840" nodeOut="1825" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1840" nodeOut="1825" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1845" nodeOut="1825" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1846" nodeOut="1825" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1840" nodeOut="1830" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1847" nodeOut="1830" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1630" nodeOut="1836" portIn="Stop" portOut="False" enabled="1"/>
+  <Edge nodeIn="1630" nodeOut="1836" portIn="Start" portOut="True" enabled="1"/>
+  <Edge nodeIn="1848" nodeOut="1840" portIn="In0" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1701" nodeOut="1841" portIn="Show" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1701" nodeOut="1841" portIn="message" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1513" nodeOut="1842" portIn="Show" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1513" nodeOut="1842" portIn="message" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1848" nodeOut="1845" portIn="In1" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1845" nodeOut="1846" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1845" nodeOut="1847" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1836" nodeOut="1848" portIn="Value" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1869" nodeOut="1859" portIn="Set" portOut="ActionPressed" enabled="1"/>
+  <Edge nodeIn="1866" nodeOut="1865" portIn="A" portOut="z" enabled="1"/>
+  <Edge nodeIn="1866" nodeOut="1865" portIn="Activate" portOut="z" enabled="1"/>
+  <Edge nodeIn="1564" nodeOut="1866" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1798" nodeOut="1866" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1560" nodeOut="1867" portIn="vec3" portOut="HMD rot (PRY)" enabled="1"/>
+  <Edge nodeIn="1865" nodeOut="1867" portIn="vec3" portOut="HMD rot (PRY)" enabled="1"/>
+  <Edge nodeIn="1880" nodeOut="1868" portIn="In0" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1331" nodeOut="1869" portIn="In2" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1880" nodeOut="1869" portIn="In1" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1869" nodeOut="1871" portIn="In" portOut="Result" enabled="1"/>
+  <Edge nodeIn="1875" nodeOut="1874" portIn="vec3" portOut="Camera rot (PRY)" enabled="1"/>
+  <Edge nodeIn="1871" nodeOut="1875" portIn="z" portOut="z" enabled="1"/>
+  <Edge nodeIn="1450" nodeOut="1880" portIn="rotate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1883" nodeOut="1882" portIn="vec3" portOut="HMD rot (PRY)" enabled="1"/>
+  <Edge nodeIn="1897" nodeOut="1883" portIn="Activate" portOut="z" enabled="1"/>
+  <Edge nodeIn="1897" nodeOut="1883" portIn="In" portOut="z" enabled="1"/>
+  <Edge nodeIn="1953" nodeOut="1888" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1953" nodeOut="1888" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1898" nodeOut="1895" portIn="A" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1898" nodeOut="1895" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1898" nodeOut="1895" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1895" nodeOut="1897" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1888" nodeOut="1898" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1539" nodeOut="1901" portIn="rotate" portOut="Result" enabled="1"/>
+  <Edge nodeIn="1901" nodeOut="1902" portIn="x" portOut="x" enabled="1"/>
+  <Edge nodeIn="1901" nodeOut="1902" portIn="y" portOut="y" enabled="1"/>
+  <Edge nodeIn="1901" nodeOut="1903" portIn="z" portOut="z" enabled="1"/>
+  <Edge nodeIn="1719" nodeOut="1910" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1719" nodeOut="1910" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1084" nodeOut="1920" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1084" nodeOut="1920" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1666" nodeOut="1921" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1539" nodeOut="1922" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1548" nodeOut="1926" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1762" nodeOut="1926" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1754" nodeOut="1930" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1573" nodeOut="1931" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1086" nodeOut="1937" portIn="paused" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1376" nodeOut="1940" portIn="paused" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1482" nodeOut="1940" portIn="paused" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1504" nodeOut="1940" portIn="paused" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1940" nodeOut="1941" portIn="In" portOut="OnFalse" enabled="1"/>
+  <Edge nodeIn="1947" nodeOut="1946" portIn="In" portOut="OnFalse" enabled="1"/>
+  <Edge nodeIn="1458" nodeOut="1947" portIn="paused" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1664" nodeOut="1953" portIn="y" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1955" nodeOut="1954" portIn="In" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1953" nodeOut="1955" portIn="A" portOut="Out" enabled="1"/>
+ </Edges>
+ <HyperGraphId Id="{A4C343B0-B6D8-47E8-A878-36AE2B247C2F}"/>
+ <GraphTokens>
+  <Token Name="Entity_ID_Camera" Type="1"/>
+  <Token Name="Entity_ID_Camera_Fulcrum" Type="1"/>
+  <Token Name="Entity_ID_HMD_Fulcrum" Type="1"/>
+  <Token Name="Entity_ID_Head_Tilt_Parent" Type="1"/>
+  <Token Name="Entity_ID_Ref_Move" Type="1"/>
+  <Token Name="Entity_ID_Robot_Body" Type="1"/>
+  <Token Name="Entity_ID_Sphere" Type="1"/>
+  <Token Name="Entity_ID_ref_Camera_Yaw" Type="1"/>
+  <Token Name="Forward_or_Back" Type="7"/>
+  <Token Name="On_Start" Type="7"/>
+  <Token Name="Pos_Sphere_World" Type="5"/>
+  <Token Name="Vec3_Ref_Move_ForwardDirection" Type="5"/>
+  <Token Name="Vec3_Ref_Move_RightDirection" Type="5"/>
+  <Token Name="Vec3_Sphere_Velocity" Type="5"/>
+ </GraphTokens>
+</Graph>

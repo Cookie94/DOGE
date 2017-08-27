@@ -1,0 +1,12 @@
+<ObjectLayer>
+ <Layer Name="Custom_Material" GUID="{aa0e1e5f-c4d3-4e4f-983a-2e8ab426c5fa}" Exportable="1" ExportLayerPak="1" DefaultLoaded="1" HavePhysics="1" IsDefaultColor="1">
+  <LayerObjects>
+   <Object Type="Brush" Layer="Custom_Material" LayerGUID="{aa0e1e5f-c4d3-4e4f-983a-2e8ab426c5fa}" Id="{b3287306-b591-4530-b6b9-065a8420f914}" Name="showroom_glass_pane_1" HideOrder="0" Pos="1026.5,1012,32.376976" FloorNumber="-1" Rotate="1,0,0,0" Prefab="Objects/particleassets/showroom/showroom_glass_pane_001.cgf" OutdoorOnly="0" CastShadowMaps="1" RainOccluder="1" SupportSecondVisarea="0" DynamicDistanceShadows="0" Hideable="0" LodRatio="100" ViewDistanceMultiplier="1" NotTriangulate="0" NoDynamicWater="0" AIRadius="-1" NoStaticDecals="0" NoAmnbShadowCaster="0" RecvWind="0" Occluder="0" DrawLast="0" ShadowLodBias="0" RndFlags="1610612744">
+    <CollisionFiltering>
+     <Type Ship="0" Shield="0" Asteroid="0"/>
+     <Ignore Ship="0" Shield="0" Asteroid="0"/>
+    </CollisionFiltering>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

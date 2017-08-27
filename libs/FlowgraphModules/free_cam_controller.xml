@@ -1,0 +1,238 @@
+<Graph isModule="1" moduleName="Free_Cam_Controller" Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+ <ModuleInputsOutputs>
+  <Port Name="Entity_ID_Camera" Type="1" Input="1"/>
+ </ModuleInputsOutputs>
+ <Nodes>
+  <Node Id="1" Class="Module:Start_Free_Cam_Controller" pos="140,720,0" flags="0"/>
+  <Node Id="2" Class="Module:End_Free_Cam_Controller" pos="140,540,0" flags="0">
+   <Inputs />
+  </Node>
+  <Node Id="3" Class="Entity:GetPos" pos="2612.4148,327.52161,0" flags="0" InHideMask="7" OutHideMask="63">
+   <Inputs CoordSys="0"/>
+  </Node>
+  <Node Id="12" Class="Entity:EntityPos" pos="3542.4148,327.52161,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="14" Class="Vec3:AddVec3" pos="3182.4148,347.52161,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="61" Class="Entity:GetPos" pos="2612.4148,567.52161,0" flags="0" InHideMask="7" OutHideMask="63">
+   <Inputs CoordSys="0"/>
+  </Node>
+  <Node Id="63" Class="Entity:EntityPos" pos="3542.4148,537.52161,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="76" Class="Entity:GetPos" pos="2612.4148,1027.5216,0" flags="0" InHideMask="7" OutHideMask="63">
+   <Inputs CoordSys="0"/>
+  </Node>
+  <Node Id="79" Class="Entity:EntityPos" pos="3542.4148,1007.5216,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="80" Class="Vec3:AddVec3" pos="3182.4148,1027.5216,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="87" Class="Entity:GetPos" pos="2612.4148,807.52161,0" flags="0" InHideMask="7" OutHideMask="63">
+   <Inputs CoordSys="0"/>
+  </Node>
+  <Node Id="89" Class="Vec3:SubVec3" pos="3182.4148,787.52161,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="90" Class="Entity:EntityPos" pos="3542.4148,767.52161,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="92" Class="Vec3:MulVec3" pos="2882.4148,347.52161,0" flags="0">
+   <Inputs A="0,0,0" B="0.05,0.05,0.05"/>
+  </Node>
+  <Node Id="93" Class="Vec3:MulVec3" pos="2872.4148,557.52161,0" flags="0">
+   <Inputs A="0,0,0" B="-0.05,-0.05,-0.05"/>
+  </Node>
+  <Node Id="94" Class="Vec3:MulVec3" pos="2872.4148,1027.5216,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="95" Class="Vec3:MulVec3" pos="2882.4148,787.52161,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="875" Class="Input:ActionHandler" pos="2112.4148,307.52161,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="moveforward"/>
+  </Node>
+  <Node Id="876" Class="Input:ActionHandler" pos="2132.4148,547.52161,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="moveback"/>
+  </Node>
+  <Node Id="884" Class="Input:ActionHandler" pos="2142.4148,787.52161,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="moveleft"/>
+  </Node>
+  <Node Id="886" Class="Input:ActionHandler" pos="2162.4148,2087.5215,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="rotateyaw"/>
+  </Node>
+  <Node Id="887" Class="Input:ActionHandler" pos="2152.4148,2407.5215,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="rotatepitch"/>
+  </Node>
+  <Node Id="993" Class="Vec3:ToVec3" pos="3332.4148,2197.5215,0" flags="0">
+   <Inputs x="0" y="0" z="0"/>
+  </Node>
+  <Node Id="995" Class="Vec3:SubVec3" pos="3582.4148,2177.5215,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="996" Class="Entity:EntityPos" pos="3812.4148,2137.5215,0" flags="0">
+   <Inputs pos="0,0,0" rotate="0,0,0" scale="0,0,0" CoordSys="0"/>
+  </Node>
+  <Node Id="997" Class="Math:Mul" pos="3052.4148,2067.5215,0" flags="0">
+   <Inputs A="0" B="0.1"/>
+  </Node>
+  <Node Id="1029" Class="Input:ActionHandler" pos="2132.4148,1007.5216,0" flags="0">
+   <Inputs ActionMapName="player" ActionName="moveright"/>
+  </Node>
+  <Node Id="1118" Class="Math:Abs" pos="2612.4148,2197.5215,0" flags="0">
+   <Inputs A="0"/>
+  </Node>
+  <Node Id="1119" Class="Math:Less" pos="2782.4148,2187.5215,0" flags="0">
+   <Inputs A="0.01" B="0"/>
+  </Node>
+  <Node Id="1121" Class="Math:Mul" pos="3052.4148,2377.5215,0" flags="0">
+   <Inputs A="0" B="0.1"/>
+  </Node>
+  <Node Id="1122" Class="Math:Abs" pos="2612.4148,2277.5215,0" flags="0">
+   <Inputs A="0"/>
+  </Node>
+  <Node Id="1123" Class="Math:Less" pos="2782.4148,2277.5215,0" flags="0">
+   <Inputs A="0.01" B="0"/>
+  </Node>
+  <Node Id="1124" Class="Entity:GetPos" pos="2832.4148,1797.5216,0" flags="0">
+   <Inputs CoordSys="1"/>
+  </Node>
+  <Node Id="1126" Class="Logic:Any" pos="2652.4148,1817.5216,0" flags="0" InHideMask="1023" OutHideMask="1">
+   <Inputs />
+  </Node>
+  <Node Id="1134" Class="Vec3:SubVec3" pos="3182.4148,557.52161,0" flags="0">
+   <Inputs A="0,0,0" B="0,0,0"/>
+  </Node>
+  <Node Id="1135" Class="Vec3:SetVec3" pos="2362.4148,27.521606,0" flags="0">
+   <Inputs In="0.05,0.05,0.05"/>
+  </Node>
+  <Node Id="1136" Name="Set move speed" Class="_comment" pos="2362.4148,-2.4783936,0" flags="0"/>
+  <Node Id="1137" Name="Set Mouse Yaw speed" Class="_comment" pos="3052.4148,2037.5216,0" flags="0"/>
+  <Node Id="1138" Name="Set Mouse Pitch Speed" Class="_comment" pos="3052.4148,2347.5215,0" flags="0"/>
+  <Node Id="1139" Class="Mission:GameToken" pos="1600,320,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1141" Class="Camera:View" pos="650,1250,0" flags="0">
+   <Inputs Enable="0" Disable="0" FOV="60" Blend="0" BlendFOVSpeed="5" BlendFOVOffset="0" BlendPosSpeed="5" BlendPosOffset="0,0,0" BlendRotSpeed="10" BlendRotOffset="0,0,0"/>
+  </Node>
+  <Node Id="1142" Class="Mission:GameTokenSet" pos="620,710,0" flags="0">
+   <Inputs gametoken_Token="On_Start" TokenValue=""/>
+  </Node>
+  <Node Id="1143" Class="Mission:GameTokenSet" pos="620,830,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera" TokenValue=""/>
+  </Node>
+  <Node Id="1144" Class="Mission:GameToken" pos="1520,430,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera" CompareValue=""/>
+  </Node>
+  <Node Id="1145" Name="Noise Check" Class="_comment" pos="2682.4148,2147.5215,0" flags="0"/>
+  <Node Id="1148" Class="Mission:GameToken" pos="1640,2200,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1149" Class="Mission:GameToken" pos="240,1350,0" flags="0">
+   <Inputs gametoken_Token="On_Start" CompareValue=""/>
+  </Node>
+  <Node Id="1152" Class="Mission:GameToken" pos="170,1250,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera" CompareValue=""/>
+  </Node>
+  <Node Id="1153" Class="Mission:GameToken" pos="2500,1490,0" flags="0">
+   <Inputs gametoken_Token="Entity_ID_Camera" CompareValue=""/>
+  </Node>
+  <Node Id="1154" Name="Move Camera" Class="_blackbox" pos="2067.4148,262.52161,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="3" Node1="12" Node2="14" Node3="61" Node4="63" Node5="76" Node6="79" Node7="80" Node8="87" Node9="89" Node10="90" Node11="92" Node12="93" Node13="94" Node14="95" Node15="875" Node16="876" Node17="884" Node18="1029" Node19="1134"/>
+  </Node>
+  <Node Id="1155" Name="Rotate Camera" Class="_blackbox" pos="2107.4148,1752.5216,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="886" Node1="887" Node2="993" Node3="995" Node4="996" Node5="997" Node6="1118" Node7="1119" Node8="1121" Node9="1122" Node10="1123" Node11="1124" Node12="1126"/>
+  </Node>
+  <Node Id="1156" Name="Set Camera" Class="_blackbox" pos="125,1205,0" flags="0">
+   <Inputs TextSize="2" DisplayFilled="1" Color="1,1,1" SortPriority="16"/>
+   <BlackBoxChildren Node0="1141" Node1="1149" Node2="1152"/>
+  </Node>
+ </Nodes>
+ <Edges>
+  <Edge nodeIn="1142" nodeOut="1" portIn="Activate" portOut="Start" enabled="1"/>
+  <Edge nodeIn="1142" nodeOut="1" portIn="TokenValue" portOut="Start" enabled="1"/>
+  <Edge nodeIn="1143" nodeOut="1" portIn="Activate" portOut="Entity_ID_Camera" enabled="1"/>
+  <Edge nodeIn="1143" nodeOut="1" portIn="TokenValue" portOut="Entity_ID_Camera" enabled="1"/>
+  <Edge nodeIn="14" nodeOut="3" portIn="A" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="92" nodeOut="3" portIn="A" portOut="FwdDir" enabled="1"/>
+  <Edge nodeIn="92" nodeOut="3" portIn="Activate" portOut="FwdDir" enabled="1"/>
+  <Edge nodeIn="12" nodeOut="14" portIn="pos" portOut="Out" enabled="1"/>
+  <Edge nodeIn="93" nodeOut="61" portIn="A" portOut="FwdDir" enabled="1"/>
+  <Edge nodeIn="93" nodeOut="61" portIn="Activate" portOut="FwdDir" enabled="1"/>
+  <Edge nodeIn="1134" nodeOut="61" portIn="A" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="80" nodeOut="76" portIn="A" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="94" nodeOut="76" portIn="A" portOut="RightDir" enabled="1"/>
+  <Edge nodeIn="94" nodeOut="76" portIn="Activate" portOut="RightDir" enabled="1"/>
+  <Edge nodeIn="79" nodeOut="80" portIn="pos" portOut="Out" enabled="1"/>
+  <Edge nodeIn="89" nodeOut="87" portIn="A" portOut="Pos" enabled="1"/>
+  <Edge nodeIn="95" nodeOut="87" portIn="A" portOut="RightDir" enabled="1"/>
+  <Edge nodeIn="95" nodeOut="87" portIn="Activate" portOut="RightDir" enabled="1"/>
+  <Edge nodeIn="90" nodeOut="89" portIn="pos" portOut="Out" enabled="1"/>
+  <Edge nodeIn="14" nodeOut="92" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="14" nodeOut="92" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1134" nodeOut="93" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1134" nodeOut="93" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="80" nodeOut="94" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="80" nodeOut="94" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="89" nodeOut="95" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="89" nodeOut="95" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="3" nodeOut="875" portIn="Get" portOut="ActionHeld" enabled="1"/>
+  <Edge nodeIn="61" nodeOut="876" portIn="Get" portOut="ActionHeld" enabled="1"/>
+  <Edge nodeIn="87" nodeOut="884" portIn="Get" portOut="ActionHeld" enabled="1"/>
+  <Edge nodeIn="997" nodeOut="886" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1118" nodeOut="886" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1118" nodeOut="886" portIn="Activate" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1126" nodeOut="886" portIn="In0" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1121" nodeOut="887" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1122" nodeOut="887" portIn="A" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1122" nodeOut="887" portIn="Activate" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="1126" nodeOut="887" portIn="In1" portOut="ActionInvoked" enabled="1"/>
+  <Edge nodeIn="995" nodeOut="993" portIn="Activate" portOut="Result" enabled="1"/>
+  <Edge nodeIn="995" nodeOut="993" portIn="B" portOut="Result" enabled="1"/>
+  <Edge nodeIn="996" nodeOut="995" portIn="rotate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="993" nodeOut="997" portIn="z" portOut="Out" enabled="1"/>
+  <Edge nodeIn="76" nodeOut="1029" portIn="Get" portOut="ActionHeld" enabled="1"/>
+  <Edge nodeIn="1119" nodeOut="1118" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1119" nodeOut="1118" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="997" nodeOut="1119" portIn="Activate" portOut="OnTrue" enabled="1"/>
+  <Edge nodeIn="993" nodeOut="1121" portIn="x" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1123" nodeOut="1122" portIn="Activate" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1123" nodeOut="1122" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="1121" nodeOut="1123" portIn="Activate" portOut="OnTrue" enabled="1"/>
+  <Edge nodeIn="995" nodeOut="1124" portIn="A" portOut="Rotate" enabled="1"/>
+  <Edge nodeIn="1124" nodeOut="1126" portIn="Get" portOut="Out" enabled="1"/>
+  <Edge nodeIn="63" nodeOut="1134" portIn="pos" portOut="Out" enabled="1"/>
+  <Edge nodeIn="92" nodeOut="1135" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="93" nodeOut="1135" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="94" nodeOut="1135" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="95" nodeOut="1135" portIn="B" portOut="Out" enabled="1"/>
+  <Edge nodeIn="875" nodeOut="1139" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="876" nodeOut="1139" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="884" nodeOut="1139" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1029" nodeOut="1139" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1135" nodeOut="1139" portIn="Set" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="3" nodeOut="1144" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="12" nodeOut="1144" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="61" nodeOut="1144" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="63" nodeOut="1144" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="76" nodeOut="1144" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="79" nodeOut="1144" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="87" nodeOut="1144" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="90" nodeOut="1144" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="886" nodeOut="1148" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="887" nodeOut="1148" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1141" nodeOut="1149" portIn="Enable" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1141" nodeOut="1152" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="996" nodeOut="1153" portIn="entityId" portOut="TokenValue" enabled="1"/>
+  <Edge nodeIn="1124" nodeOut="1153" portIn="entityId" portOut="TokenValue" enabled="1"/>
+ </Edges>
+ <GraphTokens>
+  <Token Name="Entity_ID_Camera" Type="1"/>
+  <Token Name="On_Start" Type="1"/>
+ </GraphTokens>
+</Graph>
